@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guitarmy</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="shortcut icon" href="https://images.vectorhq.com/images/previews/6a3/gun-guitar-vector-psd-457698.png"/>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <a class="navbar-brand" href="/">Guitarmy</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/login">Home</a>
+      </li>
+      <li class="nav-item active">
+      	<a class="nav-link" href="/bands">Bands</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/guitarists">Guitarists</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/guitars">Guitars</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+	<nav>
+		<% if session[:logged_in] %>
+			Logged in as <%= session[:username] %>
+			<a href="/users/logout">Log Out</a>
+		<% else %>
+			<a href="/users/login">Log In</a> |
+			<a href="/users/register">Register</a>
+		<% end %>
+	</nav>
+</header>
+
+
+	<% if session[:message] %>
+		<p class="message <%= session[:message][:status] %>"><%= session[:message][:message] %></p>
+	<%
+		end
+		session[:message] = nil 
+	%>
+
+	<%= yield %>
+	<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+<footer>
+	<div class="github-button">
+		<a class="github-button" href="https://github.com/warhellride" data-size="large" align="center" aria-label="Follow @warhellride on GitHub">@warhellride</a>
+	</div>
+	<!-- <div class="LI-profile-badge"  data-version="v1" data-size="small" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="justin-atkins-92a60018"><a class="LI-simple-link" href='https://www.linkedin.com/in/justin-atkins-92a60018?trk=profile-badge'>Justin Atkins</a>
+	</div> -->
+<!-- <script src="https://www.linkedin.com/in/justin-atkins-92a60018" type="text/ruby"> lang: en_US</script>
+<script type="IN/FollowCompany" data-id="1337"></script> -->
+</footer>
+</body>
+</html>
+
+
+
+
+
+<!-- <img src="..." class="rounded mx-auto d-block" alt="...">
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

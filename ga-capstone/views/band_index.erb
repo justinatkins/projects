@@ -1,0 +1,27 @@
+<h2>Bands Index</h2>
+
+<ul>
+	<% @bands.each do |band| 
+			# pp band
+	%>
+	<li>
+		<%= band.band_name %></br>
+		<img src="<%= band.band_url %>"></img></br>
+			
+		<form action="/bands/<%= band.id %>/edit" method="PUT">
+			<input type="hidden" name="_method" value="UPDATE">
+				<button>Edit Info</button>
+		</form>
+		<form action="/bands/<%= band.id %>" method="POST">
+			<input type="hidden" name="_method" value="DELETE">
+				<button>Delete</button>
+		</form>
+	</li>
+	<% end %>
+
+
+<div style="text-align:center">    
+  <a href="/bands/new" style="text-align:center" font size="+2">Add Band</a>
+</div>
+
+</ul>

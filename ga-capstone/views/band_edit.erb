@@ -1,0 +1,11 @@
+<h2>Edit Band</h2>
+<form action="/bands/<%= @band.id %>" method="POST">
+	<input type="hidden" name="_method" value="PUT" />
+	Band:</br>
+	<input type="text" name="band_name" value="<%= @band.band_name %>" /></br>
+	Pic URL:</br>
+	<input type="text" name="band_url" value ="<%= @band.band_url %>" /></br>
+	<button>Update Band</button>
+</form>
+
+	

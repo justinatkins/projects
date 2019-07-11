@@ -1,0 +1,59 @@
+body {
+	background-image: url("https://www.flickr.com/photos/goincase/8368312924/in/album-72157632478089187/");
+/*	background-image: url("https://www.clipart.email/download/1848414.html");
+*//*	margin-right: auto;
+  	margin-left: auto;*/
+	/*background-image: url("https://www.wallpaperup.com/59104/apc_A_P_C_denim_clothing_Incase.html");*/
+	font-family: 'Permanent Marker', cursive;
+	background-size: 100%;
+}
+
+.github-button {
+	/*background-color: lightblue;*/
+	margin-top: 15px;
+	text-align: center;
+	font-size: 20px;
+}
+
+.LI-profile-badge {
+	margin-top: 15px;
+	text-align: center;
+	font-size: 20px;
+}
+
+/*.add-band {
+	margin-top: 15px;
+	text-align: center;
+	font-size: 40px;
+}
+
+.add-guitarist {
+	margin-top: 15px;
+	text-align: center;
+	font-size: 20px;
+}
+
+.add-guitar {
+	margin-top: 15px;
+	text-align: center;
+	font-size: 20px;
+}*/
+
+/*.404-page {
+	background-image: url("https://globetrottinggrandpa.com/wp-content/uploads/2019/04/td.jpg");
+}*/
+
+/*.navbar-brand {
+	background-color: blue;
+	background-image: url("https://www.flickr.com/photos/goincase/8365291882");
+}*/
+
+#header-div {
+	/*background-image: url("https://www.flickr.com/photos/goincase/8368312924/in/album-72157632478089187/");*/
+	height: 5em;
+	font-size: 20px;
+	line-height: 50px;
+	font-weight: bold;
+	font-family: 'Permanent Marker', cursive;
+	text-shadow: 2px 2px #E40030;
+}

@@ -1,0 +1,16 @@
+<h2>Add A New Guitarist</h2>
+<form action="new" method="POST">
+	Name:</br>
+	<input type="text" name="name" placeholder="name" /></br>
+	Guitarist Pic:</br>
+	<input type="url" name="guitarist_url" placeholder="pic url" /></br>
+	Band:</br>
+	<select name="band_id">
+		<% @bands.each do |band_name| %>
+			<option value="<%=band_name[:id]%>"><%=band_name[:band_name]%></option>
+		<% end %>
+	</select></br>
+
+	
+		<button>Add Guitarist!</button>
+</form>

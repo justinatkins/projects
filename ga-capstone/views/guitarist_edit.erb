@@ -1,0 +1,26 @@
+<h2>Edit Guitarist</h2>
+<form action="/guitarists/<%= @guitarist.id %>" method="POST">
+	Name:</br>
+	<input type="hidden" name="_method" value="PUT" />
+	<input type="text" name="name" value="<%= @guitarist.name %>" /></br>
+	Guitarist Pic:</br>
+	<input type="url" name="guitarist_url" value="<%= @guitarist.guitarist_url %>" /></br>
+	Band:</br>
+	<select name="band_id">
+		<% @band.each do |band_name| %>
+			<option value="<%=band_name[:id]%>"><%=band_name[:band_name]%></option>
+		<% end %>
+	</select></br>
+	Guitars:</br>
+	<%@guitar.each do |guitar|%>
+		<input type="checkbox" name="guitar_id[]" value="<%=guitar.id%>" id="<%=guitar.id%>">
+		<%=guitar.make%> <%=guitar.model%></input>
+	<% end %></br>
+	
+	
+
+	<!-- CHECKBOXES -->
+
+	<button>Update Guitarist!</button>
+</form> 
+
